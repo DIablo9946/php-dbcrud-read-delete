@@ -8,6 +8,7 @@
  #container {
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 
 .box {
@@ -16,12 +17,13 @@
   border: 3px black dotted;
   float: left;
   margin-left: 20px;
-  position: relative;
+
 }
 
 .delButt {
   position: absolute;
-  bottom: 20px;
+  right: 20px;
+  top : 10px;
 }
 
 .accepted {
@@ -36,4 +38,11 @@
 .pending {
   background-color: gray;
   color: white;
+}
+
+.paymentBox {
+  border: 1px black solid;
+  padding: 10px;
+  margin-right: 10px;
+    position: relative;
 }

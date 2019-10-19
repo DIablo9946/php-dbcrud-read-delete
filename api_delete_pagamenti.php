@@ -15,26 +15,19 @@
     die();
   };
 
+  $id = $_GET["id"];
   $pagamenti = [];
-  $query = "SELECT *
-            FROM pagamenti";
+  $query = "DELETE
+            FROM pagamenti
+            WHERE id=" . $id . "";
 
   $res = $conn -> query($query);
 
-  if ($res && $res -> num_rows > 0) {
-
-
-        while($row = $res -> fetch_assoc()) {
-
-          $pagamenti[] = $row;
-        }
-      };
 
 
 
 
-
-  echo json_encode($pagamenti);
+  echo json_encode($res);
 
   $conn->close();
 

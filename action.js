@@ -1,5 +1,6 @@
 function init(){
 dataPagamenti();
+$(document).on("click", ".paymentBox .delButt", deleteElement);
 };
 
 $(document).ready(init);
@@ -41,4 +42,24 @@ function printPagamenti(data){
 
     }
 
+};
+
+
+function deleteElement(){
+  var buttParent = $(this).parent();
+  var infoID = buttParent.data("id");
+
+
+  $.ajax({
+    url : "api_delete_pagamenti.php",
+    method : "GET",
+    data: {id : infoID},
+    success : function(data){
+        buttParent.remove();
+        printPagamenti(data);
+    },
+    error : function(data){
+
+    }
+  });
 };
