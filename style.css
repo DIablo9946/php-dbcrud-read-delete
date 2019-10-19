@@ -4,3 +4,36 @@
     box-sizing: border-box;
     padding-left: 20px;
 }
+
+ #container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.box {
+  height: 500px;
+  width: 450px;
+  border: 3px black dotted;
+  float: left;
+  margin-left: 20px;
+  position: relative;
+}
+
+.delButt {
+  position: absolute;
+  bottom: 20px;
+}
+
+.accepted {
+  background-color: azure;
+}
+
+.rejected {
+  background-color: purple;
+  color: white;
+}
+
+.pending {
+  background-color: gray;
+  color: white;
+}

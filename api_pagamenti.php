@@ -17,7 +17,8 @@
 
   $pagamenti = [];
   $query = "SELECT *
-            FROM pagamenti";
+            FROM pagamenti
+            WHERE id >= 100";
 
   $res = $conn -> query($query);
 

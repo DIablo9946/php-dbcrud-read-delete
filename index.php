@@ -10,12 +10,23 @@
   </head>
   <body>
     <div id="container">
-
+      <div class="box accepted">
+        <h1>ACCEPTED Payments</h1>
+      </div>
+      <div class="box pending">
+        <h1>PENDING Payments</h1>
+      </div>
+      <div class="box rejected">
+        <h1>REJECTED Payments</h1>
+      </div>
     </div>
 
-    
-  <script id="template" type="text/x-handlebars-template">
 
+  <script id="template" type="text/x-handlebars-template">
+    <div class="paymentBox" data-id={{id}}>
+      <p>Prezzo {{price}}</p>
+      <button class="delButt">Delete Me</button>
+    </div>
   </script>
   <script type="text/javascript" src="action.js"></script>
   </body>
